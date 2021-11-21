@@ -16,6 +16,8 @@
 		38459B9F2749EE9100989838 /* ArukeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38459B9E2749EE9100989838 /* ArukeAppTests.swift */; };
 		38459BA92749EE9100989838 /* ArukeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38459BA82749EE9100989838 /* ArukeAppUITests.swift */; };
 		38459BAB2749EE9100989838 /* ArukeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38459BAA2749EE9100989838 /* ArukeAppUITestsLaunchTests.swift */; };
+		38459BB82749F84D00989838 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38459BB72749F84D00989838 /* Auth0.plist */; };
+		38459BBB2749FB0100989838 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 38459BBA2749FB0100989838 /* Auth0 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		38459BA42749EE9100989838 /* ArukeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArukeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38459BA82749EE9100989838 /* ArukeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArukeAppUITests.swift; sourceTree = "<group>"; };
 		38459BAA2749EE9100989838 /* ArukeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArukeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38459BB72749F84D00989838 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38459BBB2749FB0100989838 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 				38459B902749EE9100989838 /* Assets.xcassets */,
 				38459B922749EE9100989838 /* LaunchScreen.storyboard */,
 				38459B952749EE9100989838 /* Info.plist */,
+				38459BB72749F84D00989838 /* Auth0.plist */,
 			);
 			path = ArukeApp;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = ArukeApp;
+			packageProductDependencies = (
+				38459BBA2749FB0100989838 /* Auth0 */,
+			);
 			productName = ArukeApp;
 			productReference = 38459B842749EE8B00989838 /* ArukeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 38459B7B2749EE8B00989838;
+			packageReferences = (
+				38459BB92749FB0100989838 /* XCRemoteSwiftPackageReference "Auth0.swift" */,
+			);
 			productRefGroup = 38459B852749EE8B00989838 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +245,7 @@
 				38459B942749EE9100989838 /* LaunchScreen.storyboard in Resources */,
 				38459B912749EE9100989838 /* Assets.xcassets in Resources */,
 				38459B8F2749EE8B00989838 /* Main.storyboard in Resources */,
+				38459BB82749F84D00989838 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38459BB92749FB0100989838 /* XCRemoteSwiftPackageReference "Auth0.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38459BBA2749FB0100989838 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38459BB92749FB0100989838 /* XCRemoteSwiftPackageReference "Auth0.swift" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38459B7C2749EE8B00989838 /* Project object */;
 }
